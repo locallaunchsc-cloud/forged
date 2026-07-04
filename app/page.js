@@ -98,6 +98,9 @@ export default function StorefrontPage() {
         </RevealSection>
 
         <RevealSection className="how">
+          <div className="how-head">
+            <h2>How it works</h2>
+          </div>
           <div className="how-grid">
             <div className="how-step">
               <p className="how-num">01</p>
@@ -265,36 +268,54 @@ export default function StorefrontPage() {
         }
 
         .how {
-          max-width: 900px;
+          max-width: 1000px;
           margin: 0 auto;
-          padding: 60px 24px 100px;
+          padding: 100px 24px 120px;
           border-top: 1px solid rgba(255,255,255,0.07);
+        }
+        .how-head {
+          text-align: center;
+          margin-bottom: 48px;
+        }
+        .how-head h2 {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 1.9rem;
+          font-weight: 700;
+          margin: 0;
         }
         .how-grid {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 32px;
+          gap: 24px;
+        }
+        .how-step {
+          padding: 32px 28px;
+          border-radius: 16px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
+          border: 1px solid rgba(255,255,255,0.06);
         }
         .how-num {
           font-family: 'Space Grotesk', sans-serif;
           color: #e0824d;
           font-weight: 700;
           font-size: 0.9rem;
-          margin: 0 0 10px;
+          margin: 0 0 14px;
         }
-        .how-step h3 { margin: 0 0 6px; font-size: 1.1rem; font-weight: 500; }
+        .how-step h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 500; }
         .how-step p { color: #a89e93; margin: 0; line-height: 1.6; font-size: 0.9rem; }
 
         .footer {
           text-align: center;
-          padding: 32px;
+          padding: 48px 32px 40px;
+          border-top: 1px solid rgba(255,255,255,0.05);
         }
-        .footer p { color: #4a453d; font-size: 0.8rem; margin: 0; }
+        .footer p { color: #4a453d; font-size: 0.8rem; margin: 0; letter-spacing: 0.05em; }
 
         @media (max-width: 760px) {
           .hero h1 { font-size: 3rem; }
           .hero { padding: 60px 24px 24px; }
-          .how-grid { grid-template-columns: 1fr; gap: 24px; }
+          .how { padding: 60px 24px 80px; }
+          .how-grid { grid-template-columns: 1fr; gap: 16px; }
         }
       `}</style>
     </>
